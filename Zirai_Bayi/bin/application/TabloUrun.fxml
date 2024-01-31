@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.urunlerController">
+   <children>
+      <SplitPane dividerPositions="0.7183734939759037" layoutY="1.0" orientation="VERTICAL" prefHeight="351.4" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="223.0" prefWidth="599.0">
+               <children>
+                  <TableView fx:id="tableview_kayıtlar" onMouseClicked="#tableview_Click" prefHeight="297.6" prefWidth="599.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="table_UID" prefWidth="36.79995805025101" text="ÜrünID" visible="false" />
+                      <TableColumn fx:id="table_urunad" prefWidth="117.60000306367874" text="Ürünad" />
+                      <TableColumn fx:id="table_urunfiyat" prefWidth="104.79998779296875" text="Ürünfiyat" />
+                        <TableColumn fx:id="table_urunstok" prefWidth="98.40003967285156" text="ÜrünStok" />
+                        <TableColumn fx:id="table_Tur" minWidth="5.5999755859375" prefWidth="115.20001220703125" text="Tür" />
+                        <TableColumn fx:id="table_aciklama" prefWidth="159.199951171875" text="Etkiledigi" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane fx:id="anchor_stokekleme" prefHeight="120.0" prefWidth="699.0" visible="false">
+                     <children>
+                        <ComboBox fx:id="combobox_tur" layoutX="458.0" layoutY="14.0" prefHeight="26.0" prefWidth="98.0" promptText="Tür seçiniz" />
+                        <TextField fx:id="txt_urunad" layoutX="69.0" layoutY="15.0" prefHeight="26.0" prefWidth="98.0" />
+                        <ComboBox fx:id="combobox_Etki" layoutX="569.0" layoutY="14.0" prefHeight="26.0" prefWidth="108.0" promptText="Etki Alanı" />
+                        <Label layoutX="14.0" layoutY="19.0" text="Ürün ad :" />
+                        <TextField fx:id="txt_stok" layoutX="211.0" layoutY="15.0" prefHeight="26.0" prefWidth="89.0" />
+                        <Label layoutX="173.0" layoutY="19.0" text="Stok :" />
+                        <TextField fx:id="txt_eklenenfiyat" layoutX="356.0" layoutY="14.0" prefHeight="26.0" prefWidth="81.0" />
+                        <Label layoutX="311.0" layoutY="19.0" text="Fiyat :" />
+                        <Button fx:id="btn_stokekle" layoutX="594.0" layoutY="79.0" mnemonicParsing="false" onAction="#btn_stokekle_Click" prefHeight="26.0" prefWidth="90.0" text="Stok Ekle" />
+                        <Button fx:id="btn_stokGüncelle" layoutX="486.0" layoutY="79.0" mnemonicParsing="false" onAction="#btn_stokGüncelle_Click" prefHeight="26.0" prefWidth="90.0" text="Stok Güncelle" />
+                        <Button fx:id="btn_stosil" layoutX="378.0" layoutY="79.0" mnemonicParsing="false" onAction="#btn_stosil_Click" prefHeight="26.0" prefWidth="90.0" text="Stok Sil" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane fx:id="anchor_satıs" minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="699.0" visible="false">
+                     <children>
+                        <Button fx:id="btn_satinal" layoutX="596.0" layoutY="72.0" mnemonicParsing="false" onAction="#btn_satinal_Click" prefHeight="26.0" prefWidth="74.0" text="Satın Al" />
+                        <TextField fx:id="txt_sayi" layoutX="400.0" layoutY="15.0" onKeyPressed="#txt_sayısıChange" prefHeight="26.0" prefWidth="47.0" />
+                        <TextField fx:id="txt_fiyat" layoutX="493.0" layoutY="14.0" onKeyPressed="#txt_fiyatChange" prefHeight="26.0" prefWidth="53.0" />
+                        <Label layoutX="366.0" layoutY="18.0" text="sayısı :" />
+                        <Label layoutX="457.0" layoutY="18.0" text="fiyat :" />
+                        <TextField fx:id="txt_Alankisi" layoutX="251.0" layoutY="14.0" prefHeight="26.0" prefWidth="108.0" />
+                        <Label layoutX="200.0" layoutY="19.0" text="Alan Kişi :" />
+                        <TextField fx:id="txt_Odedigi" layoutX="624.0" layoutY="14.0" prefHeight="26.0" prefWidth="53.0" />
+                        <Label layoutX="568.0" layoutY="19.0" text="Ödediği :" />
+                        <TextField fx:id="txt_Urun_AD" layoutX="83.0" layoutY="15.0" prefHeight="26.0" prefWidth="108.0" />
+                        <Label layoutX="23.0" layoutY="19.0" text="Ürün ad :" />
+                        <Label fx:id="lbl_hakkında" layoutX="23.0" layoutY="85.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

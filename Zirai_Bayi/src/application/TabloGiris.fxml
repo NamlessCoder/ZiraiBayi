@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TabloGirişController">
+   <children>
+      <SplitPane dividerPositions="0.6435132032146957" layoutX="130.0" layoutY="33.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tableview_KayıtG" layoutX="56.0" layoutY="26.0" onMouseClicked="#tableview_kayıtG_Click" prefHeight="233.6" prefWidth="398.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="table_ıd" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="table_ad" prefWidth="75.0" text="AD" />
+                        <TableColumn fx:id="table_sifre" prefWidth="75.0" text="ŞİFRE" />
+                        <TableColumn fx:id="table_yetki" prefWidth="75.0" text="YETKİ" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="anchor_calısanislem" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="398.0" visible="false">
+               <children>
+                  <TextField fx:id="txt_ad" layoutX="89.0" layoutY="43.0" />
+                  <TextField fx:id="txt_sifre" layoutX="89.0" layoutY="85.0" />
+                  <Label layoutX="14.0" layoutY="48.0" text="Kullanıcı Adı :" />
+                  <Label layoutX="20.0" layoutY="89.0" text="Şifre :" />
+                  <Button fx:id="btn_ekle" layoutX="512.0" layoutY="21.0" mnemonicParsing="false" onAction="#btn_ekle_Click" prefHeight="26.0" prefWidth="64.0" text="Ekle" />
+                  <Button fx:id="btn_guncel" layoutX="512.0" layoutY="56.0" mnemonicParsing="false" onAction="#btn_guncel_Click" prefHeight="26.0" prefWidth="64.0" text="Güncelle" />
+                  <Button fx:id="btn_sil" layoutX="512.0" layoutY="93.0" mnemonicParsing="false" onAction="#btn_sil_Click" prefHeight="26.0" prefWidth="64.0" text="Sil" />
+                  <Label fx:id="lbl_ıd" layoutX="48.0" layoutY="17.0" text="Label" />
+                  <Label layoutX="17.0" layoutY="17.0" text="ID :" />
+                  <Label layoutX="109.0" layoutY="17.0" text="Yetki :" />
+                  <Label fx:id="lbl_yetki" layoutX="150.0" layoutY="17.0" text="Label" />
+                  <Button fx:id="btn_yetki" layoutX="353.0" layoutY="56.0" mnemonicParsing="false" onAction="#btn_yetki_Click" prefHeight="26.0" prefWidth="118.0" text="Admin Yap" visible="false" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

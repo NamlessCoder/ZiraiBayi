@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TabloGeçmisController">
+   <children>
+      <SplitPane dividerPositions="0.7309236947791165" layoutX="177.0" layoutY="86.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tableview_geçmis" layoutX="140.0" layoutY="37.0" onMouseClicked="#tableview_geçmis_Click" prefHeight="288.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="Urun_Adı" prefWidth="75.0" text="Ürün Adı" />
+                      <TableColumn fx:id="Urun_Fiyat" prefWidth="50.39996337890625" text="Fiyat" />
+                        <TableColumn fx:id="Urun_Satılan" prefWidth="76.00000762939453" text="Satılan" />
+                        <TableColumn fx:id="Urun_Tur" prefWidth="40.79998779296875" text="Tür" />
+                        <TableColumn fx:id="Urun_Alankisi" prefWidth="91.20002746582031" text="Alankişi" />
+                        <TableColumn fx:id="Urun_Satankisi" prefWidth="86.4000244140625" text="Satan Kişi" />
+                        <TableColumn fx:id="Urun_Borç" prefWidth="56.0" text="Borç " />
+                        <TableColumn fx:id="Urun_Birimfiyat" prefWidth="59.199920654296875" text="Birimfiyat" />
+                        <TableColumn fx:id="Urun_ID" minWidth="7.199951171875" prefWidth="15.199951171875" text="ID" visible="false" />
+                        <TableColumn fx:id="Urun_odedigi" prefWidth="67.20001220703125" text="Ödediği" />
+                        <TableColumn fx:id="Urun_Tarih" minWidth="0.0" prefWidth="88.00006103515625" text="Tarih" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextField fx:id="txt_alankisi" layoutX="246.0" layoutY="27.0" />
+                  <Label layoutX="181.0" layoutY="31.0" text="Alan kişi :" />
+                  <TextField fx:id="txt_odedigi" layoutX="246.0" layoutY="61.0" />
+                  <Label layoutX="131.0" layoutY="65.0" text="Ödeyeceği Miktar :" />
+                  <Button fx:id="btn_Borç" layoutX="507.0" layoutY="61.0" mnemonicParsing="false" onAction="#btn_Borç_Click" text="Borç Öde" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AnaFormController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="anchor_sol" prefHeight="500.0" prefWidth="111.0" style="-fx-background-color: #32CD32;">
+               <children>
+                  <Button fx:id="btn_ilaç" layoutY="95.0" mnemonicParsing="false" onAction="#btn_ilaç_Click" prefHeight="59.0" prefWidth="111.0" text="İlaç">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_gubre" layoutX="-1.0" layoutY="154.0" mnemonicParsing="false" onAction="#btn_gubre_Click" prefHeight="59.0" prefWidth="111.0" text="Gübre">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_hormon" layoutY="211.0" mnemonicParsing="false" onAction="#btn_hormon_Click" prefHeight="59.0" prefWidth="111.0" text="Hormon">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_exit" layoutY="440.0" mnemonicParsing="false" onAction="#btn_exit_click" prefHeight="59.0" prefWidth="111.0" text="Çıkış">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_geçmis" layoutY="271.0" mnemonicParsing="false" onAction="#btn_geçmis_Click" prefHeight="54.0" prefWidth="111.0" text="Geçmiş">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_calisan" layoutX="-1.0" layoutY="326.0" mnemonicParsing="false" onAction="#btn_calisan_Click" prefHeight="53.0" prefWidth="111.0" text="çalışan">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_stok" layoutX="-1.0" layoutY="380.0" mnemonicParsing="false" onAction="#btn_stok_Click" prefHeight="59.0" prefWidth="111.0" text="Stok">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER" layoutX="4.0" prefHeight="98.0" prefWidth="101.0">
+                     <children>
+                        <ImageView fitHeight="99.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@wheat-svg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <SplitPane dividerPositions="0.1890048154093098" layoutX="111.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="688.0">
+              <items>
+                <AnchorPane fx:id="anchor_sagust" minHeight="0.0" minWidth="0.0" prefHeight="146.0" prefWidth="586.0">
+                     <children>
+                        <TextField fx:id="txt_ara" layoutX="122.0" layoutY="29.0" prefHeight="26.0" prefWidth="362.0" promptText="Aramak istediğiniz ürün" />
+                        <Label layoutX="29.0" layoutY="33.0" text="Arama Çubuğu" />
+                        <Button fx:id="btn_ara" layoutX="512.0" layoutY="29.0" mnemonicParsing="false" onAction="#btn_ara_Click" text="Ara" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane fx:id="anchor_sagalt" minHeight="0.0" minWidth="0.0" prefHeight="402.0" prefWidth="690.0" />
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
